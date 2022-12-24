@@ -2,7 +2,6 @@ import glob
 import re
 
 from tqdm import tqdm
-#from transformers.models.bert_japanese.tokenization_bert_japanese import BertJapaneseTokenizer
 from transformers.models.bert.tokenization_bert import BertTokenizer
 
 
@@ -23,16 +22,13 @@ if __name__ == '__main__':
     num_use_uttr = 2
     use = 0
     not_use = 0
-    #tokenizer = BertJapaneseTokenizer.from_pretrained(Config.model_name)
     tokenizer = BertTokenizer.from_pretrained(Config.model_name)
     #file_name = Config.train_data_path
     file_name = './data/yuan.dia1.txt'
     with open(file_name, 'a', encoding='utf-8') as ff:
-        #files = glob.glob('./data/tweet_data_*.txt')
         files = glob.glob('./data/yuan1.txt')
         num_files = len(files)
-        for f_num, fn in enumerate(files, start=1):
-            #num_uttr = int(float(fn.split('/')[-1].split('.')[0].split('_')[-1])) + 1
+        for f_num, fn in enumerate(files, start=1):            
             num_uttr = 2
             with open(fn, 'r', encoding='utf-8') as f:
                 lines = f.readlines()
