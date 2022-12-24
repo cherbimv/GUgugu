@@ -8,8 +8,7 @@ import torch.optim as optim
 
 from config import Config
 from nn import build_model
-#from tokenizer import BertTokenizer
-from tokenizerch import BertTokenizer
+from tokenizer import BertTokenizer
 from utils import (DialogDataset, one_cycle, evaluate,
                    seed_everything, BalancedDataLoader,
                    make_train_data_from_txt, make_itf)
@@ -62,4 +61,4 @@ if __name__ == '__main__':
         one_cycle(epoch, Config, model, optimizer, criterion,
                   BalancedDataLoader(dataset, tokenizer.pad_token_id),
                   tokenizer, device)
-        evaluate(Config, 'おはよーーー', tokenizer, model, device)
+        evaluate(Config, '你若安好', tokenizer, model, device)
