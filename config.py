@@ -8,7 +8,6 @@ class Config:
     lr = 1e-3
     betas = (0.9, 0.98)
 
-    #num_head = 8 num_layer = 6 vocab_size = 32000 japan
     vocab_size = 32000
     num_head = 8
     d_model = 768
@@ -37,4 +36,4 @@ class Config:
 
     model_name = 'ethanyt/guwenbert-base'
     #model_name = 'bert-base-chinese'
-    #model_name = 'cl-tohoku/bert-base-japanese-whole-word-masking'
+
